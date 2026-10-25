@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PIQ document scan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="app-top"><div class="app-top-in"><h1>PROPERTY INFORMATION QUESTIONNAIRE</h1></div></header>
+<main class="page">
+  <div class="shell">
+    <div class="progress" role="progressbar" aria-label="Confirmed answers" aria-valuemin="0" id="progWrap"><span id="prog"></span></div>
+    <div class="shell-body">
+      <nav class="steps" id="steps" aria-label="Steps"></nav>
+      <div class="content">
+        <p class="sum"><span><strong id="sumDocs">0</strong> documents read</span><span><strong id="sumFound">0</strong> answers found</span><span><strong id="sumConfirmed">0</strong> confirmed</span></p>
+        <div id="scan"></div>
+      </div>
+    </div>
+  </div>
+</main>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
