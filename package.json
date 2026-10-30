@@ -1,0 +1,9 @@
+{
+  "name": "formika-sector-form-platform",
+  "version": "0.1.0",
+  "description": "Sector-adaptable AI form platform prototype",
+  "type": "module",
+  "private": true,
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "engines": { "node": ">=18.18" }
+}
