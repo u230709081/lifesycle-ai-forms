@@ -1,0 +1,202 @@
+
+[
+  {
+    "id": "property_epc_explicit",
+    "request": {
+      "intent": "Create a property sale form including EPC",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Address",
+          "synonyms": ["Address"],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "property_details",
+          "name": "Property Details",
+          "description": "Property information",
+          "synonyms": [],
+          "importance": "recommended",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "energy_rating",
+          "name": "Energy Rating",
+          "description": "Energy performance",
+          "synonyms": ["EPC"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": [
+      "property_address",
+      "property_details",
+      "energy_rating"
+    ]
+  },
+  {
+    "id": "property_semantic_turkish",
+    "request": {
+      "intent": "Ev satış formuna enerji sertifikası bilgilerini ekle.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Address",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "energy_rating",
+          "name": "Energy Rating",
+          "description": "Energy performance",
+          "synonyms": ["EPC"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": [
+      "property_address",
+      "energy_rating"
+    ]
+  },
+  {
+    "id": "property_negation",
+    "request": {
+      "intent": "Create a property form. Do not include garden size.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Address",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "garden_size",
+          "name": "Garden Size",
+          "description": "Garden area",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": [
+      "property_address"
+    ]
+  },
+  {
+    "id": "hotel_arrival",
+    "request": {
+      "intent": "Create a hotel prearrival form including arrival time",
+      "domainPackId": "hotel-prearrival",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "guest_name",
+          "name": "Guest Name",
+          "description": "Name of the guest",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "arrival_time",
+          "name": "Arrival Time",
+          "description": "Expected arrival time",
+          "synonyms": ["Check-in Time"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "airport_transfer",
+          "name": "Airport Transfer",
+          "description": "Transfer arrangement",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": [
+      "guest_name",
+      "arrival_time"
+    ]
+  },
+  {
+    "id": "onboarding_defaults",
+    "request": {
+      "intent": "Create an employee onboarding form",
+      "domainPackId": "employee-onboarding",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "emergency_contact",
+          "name": "Emergency Contact",
+          "description": "Contact details",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "start_date",
+          "name": "Start Date",
+          "description": "Employee start date",
+          "synonyms": [],
+          "importance": "recommended",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "equipment",
+          "name": "Equipment",
+          "description": "Equipment requests",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": [
+      "emergency_contact",
+      "start_date"
+    ]
+  },
+  {
+    "id": "no_optional_match",
+    "request": {
+      "intent": "Create a simple form",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "availableConcepts": [
+        {
+          "id": "parking",
+          "name": "Parking",
+          "description": "Parking information",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ],
+      "constraints": []
+    },
+    "expectedConceptIds": []
+  }
+]
