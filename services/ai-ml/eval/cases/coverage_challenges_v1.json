@@ -1,0 +1,334 @@
+
+[
+  {
+    "id": "property_explicit_parking",
+    "category": "explicit",
+    "request": {
+      "intent": "Create a property form with parking details.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Property location",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "parking",
+          "name": "Parking",
+          "description": "Parking information",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["property_address", "parking"]
+  },
+  {
+    "id": "property_turkish_energy_semantic",
+    "category": "semantic",
+    "request": {
+      "intent": "Ev satış formunda enerji sertifikası bilgisini sor.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Property location",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "energy_rating",
+          "name": "Energy Rating",
+          "description": "Energy performance",
+          "synonyms": ["EPC"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["property_address", "energy_rating"]
+  },
+  {
+    "id": "property_garden_negation",
+    "category": "negation",
+    "request": {
+      "intent": "Create a property sale form.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "constraints": ["Do not include garden size."],
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Property location",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "garden_size",
+          "name": "Garden Size",
+          "description": "Garden area",
+          "synonyms": ["garden"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["property_address"]
+  },
+  {
+    "id": "property_hyphen_epc",
+    "category": "punctuation",
+    "request": {
+      "intent": "Please include EPC-related information.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "property_address",
+          "name": "Property Address",
+          "description": "Property location",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "energy_rating",
+          "name": "Energy Rating",
+          "description": "Energy performance",
+          "synonyms": ["EPC"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["property_address", "energy_rating"]
+  },
+  {
+    "id": "hotel_arrival_synonym",
+    "category": "synonym",
+    "request": {
+      "intent": "Please include check-in time.",
+      "domainPackId": "hotel-prearrival",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "guest_name",
+          "name": "Guest Name",
+          "description": "Guest identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "arrival_time",
+          "name": "Arrival Time",
+          "description": "Expected arrival",
+          "synonyms": ["check-in time"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["guest_name", "arrival_time"]
+  },
+  {
+    "id": "hotel_transfer_negation",
+    "category": "negation",
+    "request": {
+      "intent": "Create a hotel prearrival form.",
+      "domainPackId": "hotel-prearrival",
+      "domainPackVersion": "0.1",
+      "constraints": ["Do not include airport transfer."],
+      "availableConcepts": [
+        {
+          "id": "guest_name",
+          "name": "Guest Name",
+          "description": "Guest identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "airport_transfer",
+          "name": "Airport Transfer",
+          "description": "Transfer arrangements",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["guest_name"]
+  },
+  {
+    "id": "hotel_empty_candidates",
+    "category": "empty",
+    "request": {
+      "intent": "Create a hotel form.",
+      "domainPackId": "hotel-prearrival",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": []
+    },
+    "expectedConceptIds": []
+  },
+  {
+    "id": "onboarding_defaults",
+    "category": "defaults",
+    "request": {
+      "intent": "Create an onboarding form.",
+      "domainPackId": "employee-onboarding",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "employee_name",
+          "name": "Employee Name",
+          "description": "Employee identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "start_date",
+          "name": "Start Date",
+          "description": "Employment start date",
+          "synonyms": [],
+          "importance": "recommended",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "equipment",
+          "name": "Equipment",
+          "description": "Equipment requests",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["employee_name", "start_date"]
+  },
+  {
+    "id": "onboarding_laptop_synonym",
+    "category": "synonym",
+    "request": {
+      "intent": "Create an onboarding form.",
+      "domainPackId": "employee-onboarding",
+      "domainPackVersion": "0.1",
+      "constraints": ["Please include laptop requirements."],
+      "availableConcepts": [
+        {
+          "id": "employee_name",
+          "name": "Employee Name",
+          "description": "Employee identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "equipment",
+          "name": "Equipment",
+          "description": "Equipment requirements",
+          "synonyms": ["laptop"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["employee_name", "equipment"]
+  },
+  {
+    "id": "onboarding_turkish_semantic",
+    "category": "semantic",
+    "request": {
+      "intent": "İşe başlayan kişinin acil durumda aranacak yakınını sor.",
+      "domainPackId": "employee-onboarding",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "employee_name",
+          "name": "Employee Name",
+          "description": "Employee identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "emergency_contact",
+          "name": "Emergency Contact",
+          "description": "Contact in emergencies",
+          "synonyms": ["Next of Kin"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["employee_name", "emergency_contact"]
+  },
+  {
+    "id": "property_no_optional_match",
+    "category": "none",
+    "request": {
+      "intent": "Create a short property sale form.",
+      "domainPackId": "property-uk",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "swimming_pool",
+          "name": "Swimming Pool",
+          "description": "Pool details",
+          "synonyms": [],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": []
+  },
+  {
+    "id": "hotel_word_boundary",
+    "category": "word_boundary",
+    "request": {
+      "intent": "Prepare a hotel form for competition attendees.",
+      "domainPackId": "hotel-prearrival",
+      "domainPackVersion": "0.1",
+      "constraints": [],
+      "availableConcepts": [
+        {
+          "id": "guest_name",
+          "name": "Guest Name",
+          "description": "Guest identification",
+          "synonyms": [],
+          "importance": "required",
+          "relatedConceptIds": []
+        },
+        {
+          "id": "pet_information",
+          "name": "Pet Information",
+          "description": "Travelling with pets",
+          "synonyms": ["pet"],
+          "importance": "optional",
+          "relatedConceptIds": []
+        }
+      ]
+    },
+    "expectedConceptIds": ["guest_name"]
+  }
+]
